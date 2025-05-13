@@ -1,7 +1,7 @@
-## ePKI Tool - Certificate Authority and Certificate Management Utility
+## oPKI Tool - Certificate Authority and Certificate Management Utility
 
 **Overview:**  
-This versatile ePKI tool enables users to create and manage a Public Key Infrastructure (PKI) environment, including creating CAs, issuing certificates, generating CSRs, signing CSRs, and verifying certificates. It offers both command-line and GUI interfaces for flexible operation.
+This versatile oPKI tool enables users to create and manage a Public Key Infrastructure (PKI) environment, including creating CAs, issuing certificates, generating CSRs, signing CSRs, and verifying certificates. It offers both command-line and GUI interfaces for flexible operation.
 
 ---
 
@@ -29,7 +29,7 @@ This versatile ePKI tool enables users to create and manage a Public Key Infrast
 **Basic Usage:**
 
 ```bash
-python ePKI.py --help
+python oPKI.py --help
 ```
 
 **Sample commands:**
@@ -37,31 +37,31 @@ python ePKI.py --help
 - **Create a CA:**
 
 ```bash
-python ePKI.py create-ca MyRootCA --validity-days 3650 --key-type rsa --rsa-size 4096
+python oPKI.py create-ca MyRootCA --validity-days 3650 --key-type rsa --rsa-size 4096
 ```
 
 - **Issue a Certificate:**
 
 ```bash
-python ePKI.py issue-cert --ca-name MyRootCA --common-name www.example.com --san-dns www.example.com,api.example.com --validity-days 365
+python oPKI.py issue-cert --ca-name MyRootCA --common-name www.example.com --san-dns www.example.com,api.example.com --validity-days 365
 ```
 
 - **Check a Certificate:**
 
 ```bash
-python ePKI.py check-cert --cert-path ./certificates/www_example_com/cert.pem
+python oPKI.py check-cert --cert-path ./certificates/www_example_com/cert.pem
 ```
 
 - **Generate a CSR:**
 
 ```bash
-python ePKI.py generate-csr --common-name myapp.example.com --rsa-size 2048 --save-key
+python oPKI.py generate-csr --common-name myapp.example.com --rsa-size 2048 --save-key
 ```
 
 - **Sign a CSR:**
 
 ```bash
-python ePKI.py sign-csr --ca-name MyRootCA --csr-path ./certificates/myapp/csr/request.csr --validity-days 365
+python oPKI.py sign-csr --ca-name MyRootCA --csr-path ./certificates/myapp/csr/request.csr --validity-days 365
 ```
 
 Many parameters are configurable via CLI options or config files for automation.
@@ -73,7 +73,7 @@ Many parameters are configurable via CLI options or config files for automation.
 Start the GUI:
 
 ```bash
-python ePKI.py --gui
+python oPKI.py --gui
 ```
 
 This opens a window with tabs for:
@@ -97,7 +97,7 @@ This opens a window with tabs for:
 pip install cryptography pyyaml
 ```
 
-- Save your script as `ePKI.py`.
+- Save your script as `oPKI.py`.
 
 ### 2. Running
 
@@ -106,37 +106,37 @@ pip install cryptography pyyaml
 - Show help:
 
 ```bash
-python ePKI.py --help
+python oPKI.py --help
 ```
 
 - Example: create a CA:
 
 ```bash
-python ePKI.py create-ca MyRootCA --validity-days 3650 --key-type rsa --rsa-size 4096
+python oPKI.py create-ca MyRootCA --validity-days 3650 --key-type rsa --rsa-size 4096
 ```
 
 - Example: issue cert:
 
 ```bash
-python ePKI.py issue-cert --ca-name MyRootCA --common-name www.example.com --san-dns www.example.com,api.example.com --validity-days 365
+python oPKI.py issue-cert --ca-name MyRootCA --common-name www.example.com --san-dns www.example.com,api.example.com --validity-days 365
 ```
 
 - Example: check cert:
 
 ```bash
-python ePKI.py check-cert --cert-path ./certificates/www_example_com/cert.pem
+python oPKI.py check-cert --cert-path ./certificates/www_example_com/cert.pem
 ```
 
 - Example: generate CSR:
 
 ```bash
-python ePKI.py generate-csr --common-name myapp.example.com --save-key
+python oPKI.py generate-csr --common-name myapp.example.com --save-key
 ```
 
 - Example: sign CSR:
 
 ```bash
-python ePKI.py sign-csr --ca-name MyRootCA --csr-path ./certificates/myapp/csr/request.csr --validity-days 365
+python oPKI.py sign-csr --ca-name MyRootCA --csr-path ./certificates/myapp/csr/request.csr --validity-days 365
 ```
 
 #### b) GUI Mode
@@ -144,7 +144,7 @@ python ePKI.py sign-csr --ca-name MyRootCA --csr-path ./certificates/myapp/csr/r
 - Launch GUI:
 
 ```bash
-python ePKI.py --gui
+python oPKI.py --gui
 ```
 
 ---
